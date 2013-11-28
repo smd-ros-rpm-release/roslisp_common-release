@@ -1,0 +1,12 @@
+Source: ros-groovy-roslisp-utilities
+Section: misc
+Priority: extra
+Maintainer: Lorenz Moesenlechner <moesenle@cs.tum.edu>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin, ros-groovy-roslisp, sbcl
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-groovy-roslisp-utilities
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-roslisp, sbcl
+Description: Some utility functionality to interact with ROS using roslisp.
