@@ -1,0 +1,12 @@
+Source: ros-groovy-roslisp-common
+Section: misc
+Priority: extra
+Maintainer: Lorenz Moesenlechner <moesenle@cs.tum.edu>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin
+Homepage: http://ros.org/wiki/roslisp_common
+Standards-Version: 3.9.2
+
+Package: ros-groovy-roslisp-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-actionlib-lisp, ros-groovy-cl-tf, ros-groovy-cl-transforms, ros-groovy-cl-utils, ros-groovy-roslisp-utilities
+Description: Common libraries to control ROS based robots. This stack contains an implementation of actionlib (client and server) in Common Lisp, a transformation library and an implementation of tf in Common Lisp.
