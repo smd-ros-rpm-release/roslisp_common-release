@@ -1,3 +1,31 @@
+## roslisp_common (indigo) - 0.2.3-0
+
+The packages in the `roslisp_common` repository were released into the `indigo` distro by running `/usr/bin/bloom-release roslisp_common --track indigo --rosdistro indigo --new-track` on `Mon, 01 Dec 2014 07:54:27 -0000`
+
+These packages were released:
+- `actionlib_lisp`
+- `cl_tf`
+- `cl_tf2`
+- `cl_transforms`
+- `cl_utils`
+- `roslisp_common`
+- `roslisp_utilities`
+
+Version of package(s) in repository `roslisp_common`:
+- upstream repository: https://github.com/ros/roslisp_common.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.2.3-0`
+
+Versions of tools used:
+- bloom version: `0.5.12`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.10.32`
+- rosdistro version: `0.3.6`
+- vcstools version: `0.1.35`
+
+
 ## roslisp_common (hydro) - 0.2.3-0
 
 The packages in the `roslisp_common` repository were released into the `hydro` distro by running `/usr/bin/bloom-release roslisp_common --track hydro --rosdistro hydro` on `Mon, 01 Dec 2014 07:45:21 -0000`
