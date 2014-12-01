@@ -79,6 +79,9 @@
          rotation
        (make-quaternion x y z w)))))
 
+(defun transforms->tf (transforms)
+  (make-message "tf/tfMessage" :transforms (map 'vector #'transform->msg transforms)))
+
 (defun transform->tf (tr)
   (make-message "tf/tfMessage" :transforms (vector (transform->msg tr))))
 
@@ -237,3 +240,15 @@
     (change-class (make-identity-pose) 'pose-stamped
                   :frame-id child-frame-id
                   :stamp stamp)))
+
+(defun restamp-tf-msg (msg new-stamp)
+  (with-slots (tf-msg::transforms) msg
+    (loop for transform-msg across tf-msg::transforms do
+        (cl-tf::restamp-stamped-transform-msg transform-msg new-stamp))
+    msg))
+
+(defun restamp-stamped-transform-msg (msg new-stamp)
+  (with-slots ((header geometry_msgs-msg:header)) msg
+    (with-slots ((stamp std_msgs-msg:stamp)) header
+      (setf stamp new-stamp)
+      msg)))
